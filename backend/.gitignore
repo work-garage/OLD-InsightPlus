@@ -1,0 +1,22 @@
+# Python bytecode files
+_pycache_/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+*.egg-info/
+
+# Flask specific
+instance/
+*.log
+*.pot
+*.pyc
+*.pyo
+
+# .env file for environment variables
+.env
+
+# VS Code settings
+.vscode/

@@ -1,8 +1,16 @@
 flask
+sumy
+requests
 aiohttp
 spacy
 torch
 transformers
 vaderSentiment
 beautifulsoup4
-requests
+textblob
+flask_cors
+PyJWT
+bcrypt
+pyttsx3
+scikit-learn
+nltk

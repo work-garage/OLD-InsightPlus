@@ -7,23 +7,23 @@ import { TypewriterEffectSmoothDemo } from "./type";
 import { StickyScrollRevealDemo } from "./scroll";
 
 // Button Component for Sign Up and Login
-function NavigateButton({ label, route, bgColor, textColor, borderColor }) {
-  const router = useRouter(); // Initialize Next.js router
+// function NavigateButton({ label, route, bgColor, textColor, borderColor }) {
+//   const router = useRouter(); // Initialize Next.js router
 
-  const handleClick = () => {
-    console.log(`✅ ${label} button clicked! Redirecting to ${route}...`);
-    router.push(route); // Navigate to the specified route
-  };
+//   const handleClick = () => {
+//     console.log(`✅ ${label} button clicked! Redirecting to ${route}...`);
+//     router.push(route); // Navigate to the specified route
+//   };
 
-  return (
-    <button
-      onClick={handleClick}
-      className={`w-40 h-10 rounded-xl ${bgColor} ${textColor} ${borderColor} text-sm shadow-lg hover:scale-105 transition transform font-times border-2`}
-    >
-      <b>{label}</b>
-    </button>
-  );
-}
+//   return (
+//     <button
+//       onClick={handleClick}
+//       className={`w-40 h-10 rounded-xl ${bgColor} ${textColor} ${borderColor} text-sm shadow-lg hover:scale-105 transition transform font-times border-2`}
+//     >
+//       <b>{label}</b>
+//     </button>
+//   );
+// }
 
 // Home Page Component
 export default function Home() {

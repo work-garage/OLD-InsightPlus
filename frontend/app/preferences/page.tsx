@@ -1,4 +1,5 @@
-"use client"; 
+"use client";
+
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 
@@ -37,22 +38,25 @@ export default function PreferencesPage() {
       alert("Please select at least one category!");
       return;
     }
-
+  
     if (!email) {
       alert("User email not found!");
       return;
     }
-
+  
     try {
-      const response = await fetch("http://localhost:5000/update_preferences", {
+      const response = await fetch("http://localhost:5000/preferences", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, preferred_domains: selectedCategories }),
       });
-
+  
       const data = await response.json();
-
+  
       if (response.ok) {
+        // ✅ Store selected categories in localStorage
+        localStorage.setItem("newsPreferences", JSON.stringify(selectedCategories));
+  
         alert("✅ Preferences saved successfully! Redirecting to News Section...");
         router.push("/news-home");
       } else {
@@ -62,6 +66,7 @@ export default function PreferencesPage() {
       alert("Error saving preferences");
     }
   };
+  
 
   return (
     <div className="min-h-screen text-white bg-[#0A0A0A] flex items-center justify-center">

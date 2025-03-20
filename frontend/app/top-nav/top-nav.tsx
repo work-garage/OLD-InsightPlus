@@ -1,16 +1,9 @@
 import Link from "next/link";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 import { Button2 } from "../../components/ui/button2";
+import FormattedDate from "../../components/ui/FormattedDate";
 
 export default function TopNav() {
-  // Get current date in India Standard Time (IST)
-  const dateData = new Date().toLocaleDateString("en-IN", {
-    weekday: "long",  // e.g., Monday
-    day: "2-digit",   // 23
-    month: "long",    // February
-    year: "numeric",  // 2025
-  });
-
   return (
     <div className="bg-[#1A1D1F] border-b border-gray-800">
       <div className="container mx-auto px-4">
@@ -27,7 +20,7 @@ export default function TopNav() {
             </Link>
           </div>
 
-          <div className="bg-[#0EA6E9] px-4 py-1 rounded-full">{dateData}</div>
+          {/* <FormattedDate /> */}
 
           <div className="flex items-center gap-4 text-sm">
             <Link href="/signup">
@@ -35,7 +28,7 @@ export default function TopNav() {
                 Sign up
               </Button2>
             </Link>
-            <Link href="/signin">
+            <Link href="/login">
               <Button2 variant="ghost" size="sm">
                 Sign in
               </Button2>
